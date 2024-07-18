@@ -1,0 +1,1 @@
+# dio_ror_app_storage_console

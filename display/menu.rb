@@ -1,6 +1,6 @@
 def iniciar_menu()
   loop do
-    puts 'Escolha uma das opções abaixo:'
+    puts '===== Escolha uma das opções abaixo: ====='
     puts '1 - Cadastro de produtos'
     puts '2 - Lista de produtos'
     puts '3 - Retirada do estoque'
@@ -10,15 +10,16 @@ def iniciar_menu()
 
     case opcao
     when 1
-      puts 'Cadastro de produtos'
+      mensagem('Cadastro de produtos')
     when 2
-      puts 'Lista de produtos'
+      mensagem('Lista de produtos')
     when 3
-      puts 'Retirada do estoque'
+      mensagem('Retirada do estoque')
     when 4
+      limpar_tela
       exit
     else
-      puts 'Opção inválida'
+      mensagem('Opção inválida')
     end
   end
 end

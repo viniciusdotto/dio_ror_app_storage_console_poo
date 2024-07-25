@@ -18,12 +18,13 @@ def iniciar_menu(produtos = [])
       mensagem('==== Lista de produtos ====', 1, false)
       listar_produtos(produtos)
     when 3
-      mensagem(set_color('Retirada do estoque', 'warning'))
+      mensagem('==== Retirada do estoque ====', 1, false)
+      retirada_estoque(produtos)
     when 4
       limpar_tela
       exit
     else
-      mensagem('Opção inválida')
+      mensagem(set_color('Opção inválida', 'fail'), 3)
     end
   end
 end

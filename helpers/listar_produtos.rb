@@ -1,10 +1,10 @@
 require 'terminal-table'
 
-def listar_produtos(produtos)
+def listar_produtos
   table = Terminal::Table.new do |t|
     t.headings = ['ID', 'Nome', 'Descrição', 'Preço', 'Quantidade']
-    produtos.each do |row|
-      t.add_row([row[:id], row[:nome], row[:descricao], row[:preco], row[:qtd]])
+    ProdutoService.todos.each do |row|
+      t.add_row([row.id, row.nome, row.descricao, row.preco, row.qtd])
     end
   end
   puts table

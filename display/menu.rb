@@ -12,14 +12,14 @@ def iniciar_menu(produtos = [])
     when 1
       limpar_tela
       mensagem('==== Cadastro de produtos ====', 1, false)
-      produtos = cadastro_produto(produtos)
+      cadastro_produto
     when 2
       limpar_tela
       mensagem('==== Lista de produtos ====', 1, false)
-      listar_produtos(produtos)
+      listar_produtos
     when 3
       mensagem('==== Retirada do estoque ====', 1, false)
-      retirada_estoque(produtos)
+      retirada_estoque
     when 4
       limpar_tela
       exit

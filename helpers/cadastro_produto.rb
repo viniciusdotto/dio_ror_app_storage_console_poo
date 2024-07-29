@@ -1,4 +1,4 @@
-def cadastro_produto(produtos)
+def cadastro_produto
   produto = {}
 
   mensagem('Insira o nome do produto', 0, false)
@@ -13,10 +13,7 @@ def cadastro_produto(produtos)
   mensagem('Insira a quantidade do produto', 0, false)
   produto[:qtd] = gets.to_i
 
-  produto[:id] = Time.now.to_i
-
-  produtos << produto
+  ProdutoService.adicionar(Produto.new(produto))
 
   mensagem(set_color("#{produto[:nome]} adicionado", 'ok_green'), 1)
-  produtos
 end

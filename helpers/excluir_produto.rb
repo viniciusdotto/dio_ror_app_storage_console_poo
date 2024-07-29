@@ -18,6 +18,7 @@ def retirada_estoque
     mensagem("Estoque atual do produto #{produto.nome} é de #{produto.qtd}. Quanto deseja remover?", 0, false)
     quantidade = gets.to_i
     produto.qtd -= quantidade
+    JsonDriver.write
 
     mensagem(set_color('Quantidade retirada com sucesso', 'ok_green'), 3)
   end
